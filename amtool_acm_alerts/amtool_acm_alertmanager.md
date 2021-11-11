@@ -7,7 +7,7 @@ In this blog, I will introduce how to use `amtool` to manage the alerts.
 
 `amtool` is a cli tool for interacting with the Alertmanager API. It is bundled with all releases of Alertmanager. You can install in local with `go get github.com/prometheus/alertmanager/cmd/amtool`.
 
-Note: If you are the user who can access the `observability-alertmanager-0` pod directly, you can use `amtool` which is bundled with that pod.
+Note: If you are the user who can access the `observability-alertmanager-0` pod directly, you can use `amtool` which is bundled with that pod. You can skip this step `Connect to RHACM Alertmanager`. Use `amtool alert --alertmanager.url=http://alertmanager:9093` to list alerts.
 
 ## Connect to RHACM Alertmanager
 
