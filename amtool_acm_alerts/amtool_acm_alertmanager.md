@@ -21,8 +21,15 @@ You can create a config file in YAML format from one of two default config locat
 /etc/amtool/config.yml. Here is an example content:
 ```
 alertmanager.url: https://alertmanager-open-cluster-management-observability.apps.xxx
-tls.insecure.skip.verify: true
-bearer-token: sha256~xxxxxxx
+http.config.file: $HOME/.config/amtool/http_config.yml
+```
+You need to specify the file for `http.config.file`. The format is https://prometheus.io/docs/alerting/latest/configuration/#http_config. Here is an example content:
+```
+authorization:
+  type: Bearer
+  credentials: sha256~xxxxxxx
+tls_config:
+  insecure_skip_verify: true
 ```
 ## Configuration
 You can use `amtool` to understand the current alertmanager configuration.
